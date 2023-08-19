@@ -12,6 +12,8 @@ const CommonHeader: React.FC= () =>{
             switch(e.key){
                 case "homeLink":
                     router.push("/")
+                case "MMDL":
+                    router.push("/manage-my-damn-life")
                 default:
                     return
             }
@@ -19,29 +21,33 @@ const CommonHeader: React.FC= () =>{
     }
     return(
         <ConfigProvider theme={theme}>
-            <Layout.Header style={{backgroundColor:theme.token?.colorBgContainer, display: 'flex', alignItems: 'center' }}>  
-            <Image height={50} alt='Logo' src={logo} />
-            <Menu
-            onClick={navLinkClicked}
-            mode="horizontal"
-            defaultSelectedKeys={['1']}
-            items={
-                [
-                    {
-                        key: 'homeLink',
-                        label:"Home"
+   
+                <Layout >
+                    <Layout.Header  style={{backgroundColor:theme.token?.colorBgContainer, display: 'flex', alignItems: 'center' }}>  
+                <Image height={50} alt='Logo' src={logo} />
+                <Menu
+                onClick={navLinkClicked}
+                mode="horizontal"
+                defaultSelectedKeys={['1']}
+                items={
+                    [
+                        {
+                            key: 'homeLink',
+                            label:"Home"
 
-                    },
-                    {
-                        key: 'MMDL',
-                        label:"Manage My Damn Life"
+                        },
+                        {
+                            key: 'MMDL',
+                            label:"Manage My Damn Life"
 
-                    },
-                   
-                ]
-            }
-            />
-            </Layout.Header>
+                        },
+                    
+                    ]
+                }
+                />
+                </Layout.Header>
+
+                </Layout>
 
         </ConfigProvider>
     )              

@@ -1,7 +1,6 @@
 "use client";
-
 import PageBanner from "@/components/common/PageBanner"
-import { Button, Col, ConfigProvider, Row, Space } from "antd";
+import { Button, Col, ConfigProvider, Row, Typography } from "antd";
 import theme from '@/theme/themeConfig';
 import selfhosted from '#/placeholders/selfhosted.png'
 import tasks from '#/placeholders/tasks.png'
@@ -13,7 +12,6 @@ import Home from '#/mmdl/HomeView.png'
 import GanttView from '#/mmdl/GanttView.png'
 import TaskView from '#/mmdl/TaskView.png'
 import Image from "next/image";
-import Title from "antd/es/typography/Title";
 import Link from "next/link";
 
 const MMDLPage = () =>{
@@ -42,8 +40,8 @@ const MMDLPage = () =>{
                     </Col>
                 </Row>
                 <br />
-                <Title level={3} style={{textAlign:"center"}} >Get Started</Title>
-                <Title level={2} style={{textAlign:"center"}} >Clone on Github or try Docker Image</Title>
+                <Typography.Title level={3} style={{textAlign:"center"}} >Get Started</Typography.Title>
+                <Typography.Title level={2} style={{textAlign:"center"}} >Clone on Github or try Docker Image</Typography.Title>
                 <div style={{textAlign:"center", margin: 30}}>
                     <Link href="https://github.com/intri-in/manage-my-damn-life-nextjs"><Button type="primary" size="large" style={{width:300}}>Get Source Code on Github</Button></Link>
                     <br />
